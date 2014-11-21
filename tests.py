@@ -12,8 +12,8 @@ class HighCardTest(unittest.TestCase):
 
 	def test_deck_shuffle_sufficient_randomization(self):
 		deck = Deck()
-		result = deck.shuffle()
-		self.assertEqual(4, result)
+		deck.shuffle()
+		self.assertNotEqual((Rank.Two, Suit.Diamond), deck.cards[0])
 
 
 	def test_card_creation(self):

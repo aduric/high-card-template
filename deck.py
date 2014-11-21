@@ -1,4 +1,5 @@
 from card import Card, Rank, Suit
+from random import Random
 
 class Deck(object):
 
@@ -6,4 +7,10 @@ class Deck(object):
 		self.cards = [(x,y) for x in Rank for y in Suit]
 
 	def shuffle(self):
-		pass
+		rand = Random()
+		for i in range(0,51):
+			r = rand.randint(0,51)
+			c = self.cards[i]
+			self.cards[i] = self.cards[r]
+			self.cards[r] = c
+
