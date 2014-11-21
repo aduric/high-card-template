@@ -33,14 +33,17 @@ class HighCardTest(unittest.TestCase):
 	def test_player_discard_top_card_no_cards(self):
 		pass
 		
-	def test_player_discard_top_card(self):
+	def test_player_discard_top_card_one_card(self):
+		pass
+		
+	def test_player_discard_any_card_morethanonecard(self):
 		pass
 		
 	def test_player_increment_points(self);
 		pass
 		
-	def test_game_deal(self):
-		highcard = Game(Deck(), Player("player1"), Player("player2"))
+	def test_deck_deal(self):
+		pass
 		
 	def test_game_play_no_cards_left(self):
 		pass

@@ -13,4 +13,9 @@ class Deck(object):
 			c = self.cards[i]
 			self.cards[i] = self.cards[r]
 			self.cards[r] = c
+			
+	def deal(self, num):
+		l = self.cards[:num]
+		self.cards = self.cards[num:]
+		return l
 

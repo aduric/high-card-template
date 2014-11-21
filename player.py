@@ -1,3 +1,5 @@
+from random import Random
+
 class Player(object):
 
 	def __init__(self, name):
@@ -6,5 +8,9 @@ class Player(object):
 		self.points = 0
 		
 	def discard(self):
-		top_card = self.hand.pop()
-		return top_card
+		rand = Random()
+		r = rand.randint(0, self.hand.count() - 1)
+		c = self.hand[r]
+		self.hand.remove(r)
+		return c
+		
