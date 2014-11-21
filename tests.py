@@ -1,6 +1,8 @@
 import unittest
 from card import Card, Rank, Suit
 from deck import Deck
+from game import HighCardGame
+from player import Player
 
 class HighCardTest(unittest.TestCase):
 
@@ -27,3 +29,20 @@ class HighCardTest(unittest.TestCase):
 		card2 = Card(Rank.King, Suit.Diamond)
 
 		self.assertTrue(card1 > card2)
+		
+	def test_player_discard_top_card_no_cards(self):
+		pass
+		
+	def test_player_discard_top_card(self):
+		pass
+		
+	def test_player_increment_points(self);
+		pass
+		
+	def test_game_deal(self):
+		highcard = Game(Deck(), Player("player1"), Player("player2"))
+		
+	def test_game_play_no_cards_left(self):
+		pass
+		
+		
