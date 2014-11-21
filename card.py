@@ -21,7 +21,24 @@ class Rank(Enum):
 	King = 13
 	Ace = 14
 
-class Card(object):
+class ComparableCardMixin(object):
+	def __ne__(self, other):
+		return not (self.rank == other.rank and self.suit == other.suit)
+	def __lt__(self, other):
+		if self.rank == other.rank:
+			return self.suit < other.suit
+		else:
+			return self.rank < other.rank
+	def __gt__(self, other):
+		if self.rank == other.rank:
+			return self.suit > other.suit
+		else:
+			return self.rank > other.rank
+	def __eq__(self, other):
+		return (self.rank == other.rank and self.suit == other.suit)
+	
+
+class Card(ComparableCardMixin):
 
 	def __init__(self, rank, suit):
 		self.rank = rank

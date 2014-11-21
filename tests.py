@@ -21,3 +21,9 @@ class HighCardTest(unittest.TestCase):
 
 		self.assertEqual(Rank.Ace, card.rank)
 		self.assertEqual(Suit.Spade, card.suit)
+
+	def test_card_compare(self):
+		card1 = Card(Rank.Ace, Suit.Spade)
+		card2 = Card(Rank.King, Suit.Diamond)
+
+		self.assertTrue(card1 > card2)
